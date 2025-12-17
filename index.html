@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Examinando con Videos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Examinando con Videos</h1>
+  </header>
+
+  <main class="container">
+
+    <section class="layout">
+
+      <!-- TEXTO -->
+      <div class="card content">
+        <h2 id="current-date">Selecciona una fecha</h2>
+        <p class="verse">
+          Ten paciencia conmigo un ratito más mientras me explico, porque todavía tengo palabras que
+          decir a favor de Dios. (Job 36:2).
+        </p>
+        <div class="actions-box">
+          <a id="text-link" class="btn primary" target="_blank">Leer comentario</a>
+          <a id="video-link" class="btn secondary" target="_blank">Ver video</a>
+        </div>
+      </div>
+
+      <!-- SELECTOR -->
+      <div class="card selector">
+        <div class="calendar-header">
+          <button id="prevMonth">‹</button>
+          <span id="calendar-month">—</span>
+          <button id="nextMonth">›</button>
+        </div>
+
+        <div class="weekdays">
+          <span>L</span><span>M</span><span>X</span><span>J</span>
+          <span>V</span><span>S</span><span>D</span>
+        </div>
+
+        <div id="calendar-grid" class="calendar-grid"></div>
+        <input type="date" id="datePicker">
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="disclaimer.html" class="disclaimer-link">Aviso legal</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

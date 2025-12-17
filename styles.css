@@ -1,0 +1,228 @@
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --surface: #f9fafb;
+  --blue: #0a4bcf;
+  --blue-dark: #07389a;
+  --text: #1e2a3a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius: 22px;
+  --font: system-ui, -apple-system, "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+header {
+  background: var(--card);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  color: var(--blue);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.content h2 {
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.verse {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* BOTONES */
+.actions-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn.primary {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+}
+.btn.primary:hover {
+  background: var(--blue-dark);
+  transform: translateY(-4px);
+
+  background: rgba(10, 75, 207, 0.12);
+  transform: translateY(-4px);
+}
+
+.btn.secondary {
+  background: var(--blue);
+  color: #fff;
+}
+.btn.secondary:hover {
+  background: var(--blue-dark);
+  transform: translateY(-4px);
+}
+
+/* CALENDARIO */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.calendar-header button {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: var(--muted);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.day {
+  min-height: 44px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+
+  /* CENTER CONTENT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+}
+
+.day.selected {
+  background: var(--blue);
+  color: #fff;
+}
+.day.today {
+  border: 2px solid var(--blue);
+}
+
+input[type="date"] {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+}
+
+/* =========================
+   MOBILE HEADER TUNING
+========================= */
+@media (max-width: 480px) {
+  header {
+    padding: 12px 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+}
+
+/* =========================
+   MOBILE CONTENT PRIORITY
+========================= */
+@media (max-width: 768px) {
+  .layout {
+    gap: 18px;
+  }
+
+  /* TEXT + BUTTONS GO FULL WIDTH */
+  .content {
+    padding: 26px 20px;
+  }
+
+  /* Remove side spacing so card spans screen */
+  .container {
+    padding: 0;
+  }
+
+  .content.card {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+  }
+
+  /* Bigger buttons for thumbs */
+  .btn {
+    font-size: 1.05rem;
+    padding: 16px 24px;
+  }
+
+  /* Calendar becomes secondary */
+  .selector {
+    margin-top: 16px;
+  }
+}
