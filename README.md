@@ -5,13 +5,20 @@ Los videos enlazados han sido **meticulosamente seleccionados tras un proceso de
 
 ---
 
+## 🌐 Enlace a la aplicación (Live)
+
+👉 **Aplicación en vivo:**  
+**<https://examinando-videos.netlify.app/>**
+
+---
+
 ## 📌 Propósito del proyecto
 
 Este proyecto fue creado como una **herramienta de apoyo personal y educativo**, no comercial, que facilita el acceso organizado a:
 
-- Un versículo o texto diario  
-- Un enlace al comentario correspondiente  
-- Un enlace a un video relacionado para reflexión y profundización  
+- Un versículo o texto diario
+- Un enlace al comentario correspondiente
+- Un enlace a un video relacionado para reflexión y profundización
 
 La aplicación **no reemplaza** los contenidos oficiales, sino que **dirige al usuario a ellos** mediante enlaces directos.
 
@@ -48,3 +55,4 @@ Ejemplo de entrada diaria:
   "linkTexto": "https://wol.jw.org/es/wol/h/r4/lp-s/2026/1/1",
   "linkVideo": "jwlibrary://www.jw.org/finder?wtlocale=S&lank=pub-jwb_202005_2_VIDEO"
 }
+```
