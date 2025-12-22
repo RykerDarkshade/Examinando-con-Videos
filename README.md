@@ -42,6 +42,8 @@ La aplicación funciona de manera **simple y transparente**:
 
 En ningún momento se genera contenido automáticamente ni se obtiene información desde sitios externos.
 
+Esta aplicación es una PWA ligera. No utiliza service workers ni almacenamiento offline, ya que su contenido depende de enlaces externos y requiere conexión a Internet.
+
 ---
 
 ## 📁 Estructura del JSON
